@@ -9,6 +9,13 @@ Installing
 
     pip install --upgrade vitextaug
 
+============
+Down load VTA folder from
+
+.. code-block:: bash
+
+    https://drive.google.com/file/d/1hwmSz8WYv8x6N-Ncj51ZNGyhjrkMzGu_/view?usp=share_link
+    
 Usage
 =====
 
