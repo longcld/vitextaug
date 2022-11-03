@@ -2,6 +2,9 @@
 
 Text Data Augmentation for Vietnamese
 ===============
+
+Download VTA folder from: https://drive.google.com/file/d/1hwmSz8WYv8x6N-Ncj51ZNGyhjrkMzGu_/view?usp=share_link
+==============
 Installing
 ============
 
