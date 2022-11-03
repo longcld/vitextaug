@@ -3,7 +3,7 @@ annotator = VnCoreNLP("/home/longnt/VnCoreNLP/VnCoreNLP-1.1.1.jar", annotators="
 import json
 from random import randint
 import numpy as np
-
+import os
 
 class LexicalReplacement():
     """
@@ -19,13 +19,13 @@ class LexicalReplacement():
 
             lr.augment(text)
     """
-    def __init__(self, replacement_rate=0.1):
+    def __init__(self, path, replacement_rate=0.1):
         """
             Init variable and load Wordnet set
         """
         self.rate = replacement_rate
         
-        with open ("vietnamese-wordnet-by-type.json", "r") as f:
+        with open (os.path.join(path, "vietnamese-wordnet-by-type.json"), "r") as f:
             self.wordnet = json.load(f)
             
         self.not_change_type = ["Np", "CH", "Nux", "M", "Mx", "L", "P", "R", "E", "Cc", "T", "X", "Nu", "Nc"]
@@ -80,13 +80,13 @@ class WordEmbeddingReplacement():
 
             lr.augment(text)
     """
-    def __init__(self, replacement_rate=0.1):
+    def __init__(self, path, replacement_rate=0.1):
         """
             Init variable and load Wordnet set
         """
         self.rate = replacement_rate
         
-        with open ("phow2v_NAV.json", "r") as f:
+        with open (os.path.join(path, "phow2v_NAV.json"), "r") as f:
             self.wordnet = json.load(f)
             
         self.not_change_type = ["Np", "CH", "Nux", "M", "Mx", "L", "P", "R", "E", "Cc", "T", "X", "Nu", "Nc"]
